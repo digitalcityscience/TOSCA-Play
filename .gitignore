@@ -1,0 +1,13 @@
+
+# Build artifacts
+Binaries/
+Intermediate/
+Saved/
+
+# IDE artifacts
+.vsconfig
+.vs/
+SampleTwin.sln
+
+# Config files
+Content/CesiumSettings/CesiumIonServers/CesiumIonSaaS.uasset

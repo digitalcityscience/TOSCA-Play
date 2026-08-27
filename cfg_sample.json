@@ -1,0 +1,78 @@
+{
+	"geo_reference":	{	"projected_crs":	"EPSG:25832"
+						,	"shape_planet":	true
+						,	"origin":	[9.995545, 53.55038, 0]
+						}
+,	"start_location":	{	"location": [9.979292092836607, 53.54980280578916, 300]
+						,	"heading":	-90
+						,	"pitch":	-25
+						}
+
+,	"environment":		{	"date":	{	"day": 1, "month": 8, "year": 2011}
+						,	"solar_time":	15
+						,	"weather":	"partly_cloudy"
+						}
+
+,	"pawn":				{	"pawn_reference":	"/GenericTwinPlugin/Control/BPP_GenericTwin_Default"
+						,	"maximum_height":	1000
+
+						}
+
+,	"controllers":		{	"base_controller":	"/GenericTwinPlugin/Control/Controllers/BPPC_GenericTwin_Globe"
+						,	"controllers":	[	{"controller_id": "Orbit", "controller_reference": "/GenericTwinPlugin/Control/Controllers/BPPC_GenericTwin_Orbit"}
+											]
+						}
+
+
+,	"layers":	[	
+					{	"layer_type":	"Cesium3DTileSet"
+					,	"custom_name":	"Cesium Terrain"
+					,	"parameters":	{
+											"asset_id":	1
+										,	"overlays":	[
+															{"type": "raster", "asset_id": 2}
+														]
+										}
+					}
+
+				,	{	"layer_type":	"Cesium3DTileSet"
+					,	"custom_name":	"Cesium Building"
+					,	"parameters":	{
+											"asset_id":	96188
+										}
+					}
+
+				,	{	"layer_type":	"Compass"
+					,	"parameters":	{	"blueprint":	"/GenericTwinPlugin/Compass/BPA_GenericTwinCompass"
+										}
+					}
+
+				,	{	"layer_type":	"Toolbar"
+					,	"parameters":	{	"toolbar":	"/GenericTwinBaseUIPlugin/Toolbar/BPW_Toolbar"
+										,	"tools":	[	{	"tool": "/GenericTwinBaseUIPlugin/Tools/ManageLayers/BPW_Tool_ManageLayers"
+															,	"icon":	"/GenericTwinBaseUIPlugin/Textures/Icon_Layers"
+															}
+														,	{	"tool": "/GenericTwinBaseUIPlugin/Tools/Environment/BPW_Tool_Environment"
+															,	"icon":	"/GenericTwinBaseUIPlugin/Textures/Icon_DayWeather"
+															}
+														,	{	"tool": "/GenericTwinBaseUIPlugin/Tools/Viewpoints/BPW_Tool_Viewpoints"
+															,	"icon":	"/GenericTwinBaseUIPlugin/Textures/Icon_Viewpoints"
+															}
+														]
+										}
+					}
+ 
+				,	{	"layer_type":	"Actionbar"
+					,	"parameters":	{	"actionbar":	"/GenericTwinBaseUIPlugin/Actionbar/BPW_Actionbar"
+										,	"actions":	[	{	"action": "/GenericTwinBaseUIPlugin/Actions/BPO_Action_Screenshot"
+															,	"icon":	"/GenericTwinBaseUIPlugin/Textures/Icon_Screenshot"
+															,	"parameters":	{	"path":	"D:/tmp/Screenshots"
+																				}
+															}
+														]
+										}
+					}
+
+
+				]
+}
