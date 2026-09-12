@@ -17,9 +17,6 @@ RMDIR Plugins\GenericTwinBaseUIPlugin\Intermediate /S /Q
 RMDIR Plugins\GenericTwinCesiumPlugin\Binaries /S /Q
 RMDIR Plugins\GenericTwinCesiumPlugin\Intermediate /S /Q
 
-RMDIR Plugins\GenericTwinArcGISPlugin\Binaries /S /Q
-RMDIR Plugins\GenericTwinArcGISPlugin\Intermediate /S /Q
-
 RMDIR Plugins\GenericTwinGeospatialPlugin\Binaries /S /Q
 RMDIR Plugins\GenericTwinGeospatialPlugin\Intermediate /S /Q
 

@@ -11,3 +11,5 @@ SampleTwin.sln
 
 # Config files
 Content/CesiumSettings/CesiumIonServers/CesiumIonSaaS.uasset
+
+cesium-request-cache.sqlite
