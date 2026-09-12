@@ -1,0 +1,21 @@
+[submodule "Plugins/GenericTwinPlugin"]
+	path = Plugins/GenericTwinPlugin
+	url = ../GenericTwinPlugin.git
+[submodule "Plugins/GenericTwinCesiumPlugin"]
+	path = Plugins/GenericTwinCesiumPlugin
+	url = ../GenericTwinCesiumPlugin.git
+[submodule "Plugins/GenericTwinBaseUIPlugin"]
+	path = Plugins/GenericTwinBaseUIPlugin
+	url = ../GenericTwinBaseUIPlugin.git
+[submodule "Plugins/GenericTwinCityGMLPlugin"]
+	path = Plugins/GenericTwinCityGMLPlugin
+	url = ../GenericTwinCityGMLPlugin.git
+[submodule "Plugins/GenericTwinGeospatialPlugin"]
+	path = Plugins/GenericTwinGeospatialPlugin
+	url = ../GenericTwinGeospatialPlugin.git
+[submodule "Plugins/LibCityGMLImporterPlugin"]
+	path = Plugins/LibCityGMLImporterPlugin
+	url = ../LibCityGMLImporterPlugin.git
+[submodule "Plugins/VideoRecordingPlugin"]
+	path = Plugins/VideoRecordingPlugin
+	url = ../VideoRecordingPlugin.git
