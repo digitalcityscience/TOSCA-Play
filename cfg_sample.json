@@ -18,31 +18,20 @@
 
 						}
 
-,	"controllers":		{	"base_controller":	"/GenericTwinPlugin/Control/Controllers/BPPC_GenericTwin_Globe"
+,	"_controllers":		{	"base_controller":	"/GenericTwinPlugin/Control/Controllers/BPPC_GenericTwin_Globe"
 						,	"controllers":	[	{"controller_id": "Orbit", "controller_reference": "/GenericTwinPlugin/Control/Controllers/BPPC_GenericTwin_Orbit"}
+											]
+						}
+,	"controllers":		{	"base_controller":	"/GenericTwinPlugin/Control/Controllers/BPPC_GenericTwin_Default"
+						,	"controllers":	[	{"controller_id": "Orbit", "controller_reference": "/GenericTwinPlugin/Control/Controllers/BPPC_GenericTwin_Orbit"}
+											,	{"controller_id": "FlyTo", "controller_reference": "/GenericTwinPlugin/Control/Controllers/BPPC_GenericTwin_FlyTo"}
+											,	{"controller_id": "WindSimulationAreaSelection", "controller_reference": "/InfraredSimulationPlugin/Blueprints/BPPC_WindSimulationAreaSelection"}
 											]
 						}
 
 
 ,	"layers":	[	
-					{	"layer_type":	"Cesium3DTileSet"
-					,	"custom_name":	"Cesium Terrain"
-					,	"parameters":	{
-											"asset_id":	1
-										,	"overlays":	[
-															{"type": "raster", "asset_id": 2}
-														]
-										}
-					}
-
-				,	{	"layer_type":	"Cesium3DTileSet"
-					,	"custom_name":	"Cesium Building"
-					,	"parameters":	{
-											"asset_id":	96188
-										}
-					}
-
-				,	{	"layer_type":	"Compass"
+					{	"layer_type":	"Compass"
 					,	"parameters":	{	"blueprint":	"/GenericTwinPlugin/Compass/BPA_GenericTwinCompass"
 										}
 					}
@@ -73,6 +62,77 @@
 										}
 					}
 
+				,	{	"layer_type":	"Cesium3DTileSet"
+					,	"custom_name":	"Cesium Terrain"
+					,	"parameters":	{
+											"asset_id":	1
+										,	"overlays":	[
+															{"type": "raster", "asset_id": 2}
+														]
+										}
+					}
+
+				,	{	"_layer_type":	"StreamingCityGML"
+					,	"custom_name":	"CityModel"
+					,	"parameters":	{	"_streaming_description": "F:/GenericTwin/Data/GeoData/CityGML/LGV/lgv_lod3_citygml.tsf"
+										,	"streaming_description": "F:/GenericTwin/Data/GeoData/CityGML/LGV/lgv_lod2_citygml.tsf"
+										,	"theme":	"rgbTexture"
+										,	"wall_albedo":	[0.15, 0.15, 0.15]
+										,	"roof_albedo":	[0.4, 0.006, 0.006]
+										,	"height_offset_m": 42.0
+										,	"view_distance": 4000.0
+										,	"view_rect_half_size": 4
+										,	"max_gpu_memory_mb":	3000
+										,	"purge_interval_s":	200
+										,	"fill_feature_cache": true
+										,	"_disable_caching": true
+										}
+					}
+
+				,	{	"layer_type":	"StreamingCityGML"
+					,	"custom_name":	"CityModel"
+					,	"parameters":	{	"streaming_description": "F:/Development/Unreal/Projects/HCU/Data/CityModel/lod3_citygml_area1.tsf"
+										,	"theme":	"rgbTexture"
+										,	"coordinate_transformer": "LatLonTransformer"
+										,	"wall_albedo":	[0.15, 0.15, 0.15]
+										,	"roof_albedo":	[0.4, 0.006, 0.006]
+										,	"view_distance": 4000.0
+										,	"view_rect_half_size": 4
+										,	"max_gpu_memory_mb":	3000
+										,	"purge_interval_s":	200
+										}
+					}
+
+				,	{	"_layer_type":	"StaticCityGML"
+					,	"parameters":	{	"base_path":	"F:/Development/Unreal/Projects/HCU/Incoming/TestSet_261021/buildings_ellipsoidal/Area1/6534"
+										,	"files":	"6534.gml"
+										,	"coordinate_transformer": "LatLonTransformer"
+										,	"theme":	"rgbTexture"
+										,	"_height_offset_m":	42.0
+										,	"wall_albedo":	[0.35, 0.35, 0.35]
+										,	"roof_albedo":	[0.8, 0.1, 0.05]
+										}
+
+					}
+
+
+				,	{	"_layer_type":	"StaticCityGML"
+					,	"parameters":	{	"base_path":	"F:/Development/Unreal/Projects/HCU/Incoming/TestSet_261112"
+										,	"files":	"hamburg_transportation_bbox_lod3_citygml_2_0.gml"
+										,	"_height_offset_m":	42.0
+										,	"wall_albedo":	[0.35, 0.35, 0.35]
+										,	"roof_albedo":	[0.8, 0.1, 0.05]
+										}
+
+					}
+				,	{	"_layer_type":	"StaticCityGML"
+					,	"parameters":	{	"base_path":	"F:/Development/Unreal/Projects/HCU/Incoming/TestSet_261112"
+										,	"files":	"raw_transportation_model_v2_flattened_prototype_V22.gml"
+										,	"height_offset_m":	60.0
+										,	"material":	"/Game/TOSCA_Play/Material/M_Roads"
+										}
+
+					}
 
 				]
 }
