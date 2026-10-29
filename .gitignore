@@ -1,6 +1,7 @@
 
 # Build artifacts
 Binaries/
+Build/
 Intermediate/
 Saved/
 
