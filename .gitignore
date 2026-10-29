@@ -7,7 +7,7 @@ Saved/
 # IDE artifacts
 .vsconfig
 .vs/
-SampleTwin.sln
+*.sln
 
 # Config files
 Content/CesiumSettings/CesiumIonServers/CesiumIonSaaS.uasset
